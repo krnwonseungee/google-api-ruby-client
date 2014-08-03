@@ -15,6 +15,7 @@
 
 require 'multi_json'
 require 'compat/multi_json'
+require 'debugger'
 
 
 module Google
@@ -47,7 +48,7 @@ module Google
     #     }
     #   }
     class ClientSecrets
-      
+
       ##
       # Reads client configuration from a file
       #
@@ -63,6 +64,7 @@ module Google
         end
         while filename == nil
           search_path ||= File.expand_path('.')
+          debugger
           if File.exist?(File.join(search_path, 'client_secrets.json'))
             filename = File.join(search_path, 'client_secrets.json')
           elsif search_path == '/' || search_path =~ /[a-zA-Z]:[\/\\]/
@@ -144,7 +146,7 @@ module Google
           end
         })
       end
-      
+
       def to_authorization
         gem 'signet', '>= 0.4.0'
         require 'signet/oauth_2/client'

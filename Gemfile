@@ -39,3 +39,4 @@ end
 
 
 gem 'idn', :platform => :mri_18
+gem 'debugger'
