@@ -75,7 +75,9 @@ module Google
             search_path = File.expand_path(File.join(search_path, '..'))
           end
         end
+        debugger
         data = File.open(filename, 'r') { |file| MultiJson.load(file.read) }
+        puts "DATA#{data}"
         return self.new(data)
       end
 
