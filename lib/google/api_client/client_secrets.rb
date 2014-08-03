@@ -62,7 +62,7 @@ module Google
           filename = nil
         end
         while filename == nil
-          search_path ||= File.expand_path('.')
+          search_path ||= File.expand_path( './lib' )
           puts "SEARCH PATH#{search_path}"
           if File.exist?(File.join(search_path, 'client_secrets.json'))
             filename = File.join(search_path, 'client_secrets.json')
