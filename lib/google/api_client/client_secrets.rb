@@ -57,7 +57,7 @@ module Google
       # @return [Google::APIClient::ClientSecrets]
       #   OAuth client settings
       def self.load(filename=nil)
-        debugger
+        # debugger
         if filename && File.directory?(filename)
           search_path = File.expand_path(filename)
           filename = nil
@@ -87,7 +87,7 @@ module Google
       # @param [Hash] options
       #   Parsed client secrets files
       def initialize(options={})
-        byebug
+        # byebug
         # Client auth configuration
         @flow = options[:flow] || options.keys.first.to_s || 'web'
         fdata = options[@flow]
