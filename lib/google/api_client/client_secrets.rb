@@ -87,6 +87,7 @@ module Google
       # @param [Hash] options
       #   Parsed client secrets files
       def initialize(options={})
+        byebug
         # Client auth configuration
         @flow = options[:flow] || options.keys.first.to_s || 'web'
         fdata = options[@flow]
