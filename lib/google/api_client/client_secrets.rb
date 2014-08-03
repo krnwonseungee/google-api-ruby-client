@@ -15,7 +15,6 @@
 
 require 'multi_json'
 require 'compat/multi_json'
-require 'debugger'
 
 
 module Google
