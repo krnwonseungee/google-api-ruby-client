@@ -35,8 +35,9 @@ group :test, :development do
   gem 'rake', '>= 0.9.0'
   gem 'rspec', '>= 2.11.0'
   gem 'rcov', '>= 0.9.9', :platform => :mri_18
+  gem 'byebug'
 end
 
 
 gem 'idn', :platform => :mri_18
-gem 'debugger'
+# gem 'debugger'

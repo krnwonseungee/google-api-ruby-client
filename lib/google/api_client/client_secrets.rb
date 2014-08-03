@@ -57,6 +57,7 @@ module Google
       # @return [Google::APIClient::ClientSecrets]
       #   OAuth client settings
       def self.load(filename=nil)
+        debugger
         if filename && File.directory?(filename)
           search_path = File.expand_path(filename)
           filename = nil
@@ -75,7 +76,6 @@ module Google
             search_path = File.expand_path(File.join(search_path, '..'))
           end
         end
-        debugger
         data = File.open(filename, 'r') { |file| MultiJson.load(file.read) }
         puts "DATA#{data}"
         return self.new(data)
